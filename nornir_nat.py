@@ -19,7 +19,7 @@ def configure_nat(task):
         nat_config = []
 
     if nat_config:
-        task.run(task=netmiko_send_config, config_commands=configure_nat)
+        task.run(task=netmiko_send_config, config_commands=nat_config)
 
 
 nr = InitNornir(config_file="config.yaml")
