@@ -1,0 +1,560 @@
+2024-10-26 14:02:59,514 -  nornir.core -     INFO -        run() - Running task 'say_hello' with args {} on 2 hosts
+2024-10-26 14:03:28,468 -  nornir.core -     INFO -        run() - Running task 'say_hello' with args {} on 1 hosts
+2024-10-26 14:03:42,851 -  nornir.core -     INFO -        run() - Running task 'say_hello' with args {} on 2 hosts
+2024-10-26 14:06:29,135 -  nornir.core -     INFO -        run() - Running task 'say_hello' with args {} on 2 hosts
+2024-10-26 14:10:06,020 -  nornir.core -     INFO -        run() - Running task 'say_hello' with args {} on 2 hosts
+2024-10-26 14:13:10,504 -  nornir.core -     INFO -        run() - Running task 'say_hello' with args {} on 2 hosts
+2024-10-26 14:24:27,425 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2024-10-26 14:24:37,441 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.131.113.2:22
+
+
+
+2024-10-26 14:24:37,442 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.131.113.3:22
+
+
+
+2024-10-26 14:26:00,671 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2024-10-26 14:26:10,694 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.3:22
+
+
+
+2024-10-26 14:27:34,196 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interface brief'} on 2 hosts
+2024-10-26 14:50:32,468 -  nornir.core -     INFO -        run() - Running task 'configure_ospf' with args {} on 2 hosts
+2024-10-26 14:50:32,469 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 20, in configure_ospf
+    task.run(task=netmiko_send_command, config_commands=ospf_config)
+UnboundLocalError: local variable 'ospf_config' referenced before assignment
+
+2024-10-26 14:50:32,469 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 20, in configure_ospf
+    task.run(task=netmiko_send_command, config_commands=ospf_config)
+UnboundLocalError: local variable 'ospf_config' referenced before assignment
+
+2024-10-26 14:52:46,385 -  nornir.core -     INFO -        run() - Running task 'configure_ospf' with args {} on 2 hosts
+2024-10-26 14:52:46,387 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 20, in configure_ospf
+    task.run(task=netmiko_send_config, config_commands=ospf_config)
+UnboundLocalError: local variable 'ospf_config' referenced before assignment
+
+2024-10-26 14:52:46,387 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 20, in configure_ospf
+    task.run(task=netmiko_send_config, config_commands=ospf_config)
+UnboundLocalError: local variable 'ospf_config' referenced before assignment
+
+2024-10-26 14:53:25,611 -  nornir.core -     INFO -        run() - Running task 'configure_ospf' with args {} on 2 hosts
+2024-10-26 14:53:25,613 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 20, in configure_ospf
+    if ospf_config:  # Ensure there's a config to send
+UnboundLocalError: local variable 'ospf_config' referenced before assignment
+
+2024-10-26 14:53:25,613 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 20, in configure_ospf
+    if ospf_config:  # Ensure there's a config to send
+UnboundLocalError: local variable 'ospf_config' referenced before assignment
+
+2024-10-26 14:54:36,832 -  nornir.core -     INFO -        run() - Running task 'configure_ospf' with args {} on 2 hosts
+2024-10-26 14:54:36,832 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 21, in configure_ospf
+    if ospf_config:  # Ensure there's a config to send
+UnboundLocalError: local variable 'ospf_config' referenced before assignment
+
+2024-10-26 14:54:36,833 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 21, in configure_ospf
+    if ospf_config:  # Ensure there's a config to send
+UnboundLocalError: local variable 'ospf_config' referenced before assignment
+
+2024-10-26 14:55:21,976 -  nornir.core -     INFO -        run() - Running task 'configure_ospf' with args {} on 2 hosts
+2024-10-26 14:55:55,075 -  nornir.core -     INFO -        run() - Running task 'configure_ospf' with args {} on 2 hosts
+2024-10-26 14:56:05,083 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.2:22
+
+
+
+2024-10-26 14:56:05,083 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 24, in configure_ospf
+    task.run(task=netmiko_send_config, config_commands=ospf_config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2024-10-26 14:56:05,083 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.3:22
+
+
+
+2024-10-26 14:56:05,084 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 24, in configure_ospf
+    task.run(task=netmiko_send_config, config_commands=ospf_config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2024-10-26 14:56:25,056 -  nornir.core -     INFO -        run() - Running task 'configure_ospf' with args {} on 2 hosts
+2024-10-26 15:01:05,340 -  nornir.core -     INFO -        run() - Running task 'configure_ospf' with args {} on 2 hosts
+2024-10-26 15:01:15,356 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.3:22
+
+
+
+2024-10-26 15:01:15,356 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.2:22
+
+
+
+2024-10-26 15:01:15,357 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 25, in configure_ospf
+    task.run(task=netmiko_send_config, config_commands=ospf_config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2024-10-26 15:01:15,357 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 25, in configure_ospf
+    task.run(task=netmiko_send_config, config_commands=ospf_config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2024-10-26 15:01:22,028 -  nornir.core -     INFO -        run() - Running task 'configure_ospf' with args {} on 2 hosts
+2024-10-26 15:01:32,043 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.3:22
+
+
+
+2024-10-26 15:01:32,043 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 25, in configure_ospf
+    task.run(task=netmiko_send_config, config_commands=ospf_config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2024-10-26 15:01:44,246 -  nornir.core -     INFO -        run() - Running task 'configure_ospf' with args {} on 2 hosts
+2024-10-26 15:01:54,265 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.2:22
+
+
+
+2024-10-26 15:01:54,265 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 25, in configure_ospf
+    task.run(task=netmiko_send_config, config_commands=ospf_config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2024-10-26 15:01:54,265 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.3:22
+
+
+
+2024-10-26 15:01:54,266 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'configure_ospf' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_ospf.py", line 25, in configure_ospf
+    task.run(task=netmiko_send_config, config_commands=ospf_config)
+  File "/home/devasc/Documents/lab-nornir/nornir-env/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+

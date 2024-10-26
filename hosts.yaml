@@ -1,0 +1,9 @@
+---
+R1-13:
+  hostname: 172.31.113.2
+  groups:
+    - cisco_router
+R2-13:
+  hostname: 172.31.113.3
+  groups:
+    - cisco_router
