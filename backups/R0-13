@@ -1,43 +1,56 @@
 Building configuration...
 
-Current configuration : 3862 bytes
+Current configuration : 3504 bytes
 !
-! Last configuration change at 23:20:28 UTC Sun Oct 27 2024
-!
-version 15.2
+version 15.7
 service timestamps debug datetime msec
 service timestamps log datetime msec
 no service password-encryption
-service compress-config
 !
-hostname SW-13
+hostname R0-13
 !
 boot-start-marker
 boot-end-marker
 !
 !
 !
-username admin privilege 15 secret 5 $1$RFWZ$x.O18FvBtS0Un.5KqWvso1
 no aaa new-model
 !
 !
 !
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
 !
 !
-no ip routing
 !
 !
 !
-ip domain-name ipa.com
-no ip cef
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name ipa.com
+ip cef
 no ipv6 cef
 !
+multilink bundle-name authenticated
 !
 !
-spanning-tree mode pvst
-spanning-tree extend system-id
 !
 !
+username admin privilege 15 secret 5 $1$Klla$.Y2lDlQpFf8eYJiz2eApG0
+!
+redundancy
+!
+no cdp log mismatch duplex
+!
+ip tcp synwait-time 5
 ! 
 !
 !
@@ -52,74 +65,42 @@ spanning-tree extend system-id
 !
 !
 interface GigabitEthernet0/0
- switchport access vlan 113
- switchport mode access
- negotiation auto
+ ip address 10.0.15.113 255.255.255.0
+ duplex auto
+ speed auto
+ media-type rj45
 !
 interface GigabitEthernet0/1
- switchport access vlan 113
- switchport mode access
- negotiation auto
+ ip address 172.31.113.1 255.255.255.0
+ duplex auto
+ speed auto
+ media-type rj45
 !
 interface GigabitEthernet0/2
- switchport access vlan 113
- switchport mode access
- negotiation auto
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+ media-type rj45
 !
 interface GigabitEthernet0/3
- negotiation auto
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+ media-type rj45
 !
-interface GigabitEthernet1/0
- negotiation auto
-!
-interface GigabitEthernet1/1
- negotiation auto
-!
-interface GigabitEthernet1/2
- negotiation auto
-!
-interface GigabitEthernet1/3
- negotiation auto
-!
-interface GigabitEthernet2/0
- negotiation auto
-!
-interface GigabitEthernet2/1
- negotiation auto
-!
-interface GigabitEthernet2/2
- negotiation auto
-!
-interface GigabitEthernet2/3
- negotiation auto
-!
-interface GigabitEthernet3/0
- negotiation auto
-!
-interface GigabitEthernet3/1
- negotiation auto
-!
-interface GigabitEthernet3/2
- negotiation auto
-!
-interface GigabitEthernet3/3
- negotiation auto
-!
-interface Vlan113
- ip address 172.31.113.5 255.255.255.0
- no ip route-cache
-!
-ip default-gateway 172.31.113.1
 ip forward-protocol nd
 !
-ip http server
 !
+no ip http server
+no ip http secure-server
+ip route 10.30.6.0 255.255.255.0 10.0.15.1
+ip route 10.110.192.0 255.255.255.248 10.0.15.1
+ip route 10.253.190.0 255.255.255.0 10.0.15.1
 ip ssh version 2
-ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
-ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
 !
-!
-!
+ipv6 ioam timestamp
 !
 !
 !
@@ -154,7 +135,13 @@ banner login ^C
 **************************************************************************^C
 !
 line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
 line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
 line vty 0 4
  exec-timeout 0 0
  logging synchronous
@@ -166,5 +153,6 @@ line vty 5 15
  login local
  transport input telnet ssh
 !
+no scheduler allocate
 !
 end
