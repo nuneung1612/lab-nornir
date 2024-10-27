@@ -2,5 +2,6 @@
 cisco_router:
   platform: cisco_ios
 
+##### BONUS #####
 cisco_switch:
   platform: cisco_ios
