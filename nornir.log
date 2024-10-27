@@ -558,3 +558,1062 @@ Traceback (most recent call last):
 nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
 
 
+2024-10-27 16:29:14,578 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:29:19,696 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:29:19,697 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:29:19,698 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:34:55,480 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:34:58,159 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:34:58,161 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:34:58,161 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:35:17,815 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:35:20,431 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:35:20,433 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:35:20,433 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:35:34,170 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:35:36,696 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:35:36,698 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:35:36,698 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:35:52,069 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:35:54,669 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:35:54,671 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:35:54,671 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:37:46,160 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:37:48,441 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:37:48,442 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:37:48,443 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:38:06,175 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:38:08,549 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:38:08,550 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:38:08,550 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:40:00,441 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:40:03,069 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:40:03,071 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:40:03,071 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:45:21,551 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:46:44,980 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:47:03,749 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:47:17,566 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:49:35,049 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:50:46,313 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:50:49,041 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:50:49,042 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:50:49,043 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:53:45,799 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:53:48,195 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:53:48,197 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:53:48,197 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:55:00,851 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:55:03,378 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:55:03,380 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:55:03,380 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:56:10,096 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 16:56:12,720 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 16:56:12,721 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 16:56:12,721 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:02:51,148 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 17:02:53,628 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 17:02:53,630 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:02:53,630 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:05:16,955 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 17:05:19,509 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 17:05:19,510 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:05:19,511 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:05:33,107 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 17:05:35,458 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 17:05:35,460 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:05:35,460 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:10:05,177 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 17:10:07,507 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 17:10:07,508 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:10:07,508 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:10:50,276 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 17:10:52,440 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 17:10:52,441 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:10:52,441 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:11:09,719 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 17:11:12,160 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 17:11:12,162 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:11:12,162 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:12:11,538 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 17:12:13,789 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['config']} on 2 hosts
+2024-10-27 17:12:13,790 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:12:13,790 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2024-10-27 17:16:14,792 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 17:17:05,655 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 17:18:09,707 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 2 hosts
+2024-10-27 17:22:54,933 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 3 hosts
+2024-10-27 17:22:57,550 - nornir.core.task -    ERROR -      start() - Host 'SW-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.31.113.5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.5:22
+
+
+
+2024-10-27 17:29:00,710 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 3 hosts
+2024-10-27 17:29:02,835 - nornir.core.task -    ERROR -      start() - Host 'SW-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.31.113.5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.5:22
+
+
+
+2024-10-27 17:29:10,715 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.2:22
+
+
+
+2024-10-27 17:29:10,720 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.3:22
+
+
+
+2024-10-27 17:29:56,315 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 3 hosts
+2024-10-27 17:29:58,451 - nornir.core.task -    ERROR -      start() - Host 'SW-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.31.113.5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.5:22
+
+
+
+2024-10-27 17:30:06,320 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.2:22
+
+
+
+2024-10-27 17:30:06,320 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.3:22
+
+
+
+2024-10-27 17:30:12,155 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 3 hosts
+2024-10-27 17:30:14,364 - nornir.core.task -    ERROR -      start() - Host 'SW-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/paramiko/client.py", line 409, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 172.31.113.5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.5:22
+
+
+
+2024-10-27 17:30:22,167 - nornir.core.task -    ERROR -      start() - Host 'R2-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.3:22
+
+
+
+2024-10-27 17:30:22,167 - nornir.core.task -    ERROR -      start() - Host 'R1-13': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1139, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/paramiko/client.py", line 386, in connect
+    sock.connect(addr)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/devasc/Desktop/lab-nornir_git/venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1161, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 172.31.113.2:22
+
+
+
+2024-10-27 17:40:26,012 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 3 hosts
